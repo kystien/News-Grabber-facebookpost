@@ -1,68 +1,58 @@
-<?
-/* ------------------- Global Variables ------------------- */
-
-    $site['title'] = 'Global War News Network - Design Section';
-    $site['url'] = 'https://' . $_SERVER['HTTP_HOST'] . '/feed';
-    $site['base'] = '/feed';
-
-/* ------------------- PDO Login Information ------------------- */	
+<?php
 	
-   $dfh= 'mysql:host=localhost';
-   $host = 'localhost';
-
-   $site1['dbuser'] = ' ';
-   $site1['dbpass'] = ' ';
-   $site1['dbname'] = ' ';
-   
-   $site['updates'] = false;
-
-/* ------------------- Error and Logging ------------------- */
-
-	error_reporting(E_ALL & ~E_NOTICE);
-	ini_set('display_errors', 1);
-	//ini_set('error_log', APP_PATH . '/log/error.log');
-	ini_set('log_errors',true);
-
-		
-/* ------------------- definitions and datetime ------------------- */
-
-    date_default_timezone_set('America/Edmonton');
-    
-	define('APP_PATH', realpath(dirname(__FILE__) . '/../'));
-	define('API', realpath(dirname(__FILE__) . '/../src/API/'));
-
-
-/* ------------------- PDO Setup database ------------------- */
-
-	$db = new PDO('mysql:host=' . $host . ';dbname=' . $site1['dbname'], $site1['dbuser'], $site1['dbpass']);
+	$dfh= 'mysql:host=localhost';
+	$host = 'localhost';
+		/*		Credentials		*/
+	$site1['dbuser'] = ' ';
+	$site4['dbuser'] = ' ';
+	$site1['dbpass'] = ' ';
+		/*		Databases		*/
+	$site1['dbname'] = 'Feeds';
+	$site2['dbname'] = 'DATA';
+	$site3['dbname'] = 'Telegram';
+	$site4['dbname'] = 'Drupal';
+	
+	/* ------------------- PDO Setup database ------------------- */
+			/*		Insert & Update Databases		*/
+	$db = new PDO('mysql:host=' . $host . ';dbname=' . $site1['dbname'], $site1['dbuser'], $site1['dbpass'], array(
+    PDO::ATTR_PERSISTENT => true));
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$db->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+	
+	$db2 = new PDO('mysql:host=' . $host . ';dbname=' . $site2['dbname'], $site1['dbuser'], $site1['dbpass'], array(
+    PDO::ATTR_PERSISTENT => true));
+	$db2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$db2->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+	
+	$db3 = new PDO('mysql:host=' . $host . ';dbname=' . $site3['dbname'], $site1['dbuser'], $site1['dbpass'], array(
+    PDO::ATTR_PERSISTENT => true));
+	$db3->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$db3->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+	
+	$db4 = new PDO('mysql:host=' . $host . ';dbname=' . $site4['dbname'], $site1['dbuser'], $site1['dbpass'], array(
+    PDO::ATTR_PERSISTENT => true));
+	$db4->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$db4->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+	
+			/*			Query Databases				*/
+	$dbq = new PDO('mysql:host=' . $host . ';dbname=' . $site1['dbname'], $site4['dbuser'], $site1['dbpass'], array(
+    PDO::ATTR_PERSISTENT => true));
+	$dbq->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$dbq->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+	
+	$dbq2 = new PDO('mysql:host=' . $host . ';dbname=' . $site2['dbname'], $site4['dbuser'], $site1['dbpass'], array(
+    PDO::ATTR_PERSISTENT => true));
+	$dbq2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$dbq2->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+	
+	$dbq3 = new PDO('mysql:host=' . $host . ';dbname=' . $site3['dbname'], $site4['dbuser'], $site1['dbpass'], array(
+    PDO::ATTR_PERSISTENT => true));
+	$dbq3->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$dbq3->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+	
+	$dbq4 = new PDO('mysql:host=' . $host . ';dbname=' . $site4['dbname'], $site4['dbuser'], $site1['dbpass'], array(
+    PDO::ATTR_PERSISTENT => true));
+	$dbq4->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$dbq4->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
 
-/* ------------------- API Paths ------------------- */
-    	
-	set_include_path(APP_PATH . 'src');
-	require API . '/Functions/helper_functions.php';
-	require API . '/Functions/action_functions.php';
-	require API . '/Simplepie/autoloader.php';
-	require API . '/Facebook/autoload.php';
-
-
-/* ------------------- Facebook token & App data ------------------- */
-
-$fb = new Facebook\Facebook([
- 'app_id' => ' ',
- 'app_secret' => ' ',
- 'default_graph_version' => 'v2.9',
-]);
-
-$pageGlobalWarTTCAccessToken =' ';
-
-$pageWW3AccessToken =' ';
-
-/* ------------------- Twitter token & App data ------------------- */
-// $settings = array(
-//    'oauth_access_token' => " ",
-//    'oauth_access_token_secret' => " ",
-//    'consumer_key' => " ",
-//    'consumer_secret' => " "
-// );
+?>
