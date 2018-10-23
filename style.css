@@ -1,0 +1,481 @@
+body{ /* The complete page */
+font: 90% Helvetica, Arial, sans-serif;
+color: #333;
+text-align: center;
+margin: 0px;
+padding: 0px; 
+}
+
+#page{ /* Main Aspect page */
+margin: 0px auto;
+padding: 10px;
+text-align: left;
+}
+
+.feedtitle{ /* Main Feed title */
+border-top: 2px solid #000000;
+padding-top: 10px;
+margin-top: 30px;
+border: double #CCFFCC 20px; 
+}
+
+h3{
+margin-bottom: .3em;
+}
+
+img{
+border: none;
+}
+
+#header h1 a{ /* Main header with title */
+color: #000;
+text-decoration: none;
+float: left;
+padding: 10px 0px;
+border: double #CCFFCC 20px; 
+}
+
+#header p{
+text-align: right;
+font-size: smaller;
+}
+
+.unread{ /* Unread header link */
+background-color: #eeeeee;
+padding: 5px;
+margin: 0px 0px;
+}
+
+.unread a{
+text-decoration: none;
+color: #333;
+}
+
+.entry{ /* Each and every feed entry */
+border-top: 1px solid #cccccc;
+padding: 10px 0px;
+margin: 10px 0px;
+}
+
+.entry embed, .entry object{
+display: block;
+margin: 10px auto;
+padding: 10px;
+}
+
+.entrytitle a{ /* Feed Entry Header */
+color: #003366;
+text-align: center;
+text-decoration: none;
+font-size: small;
+padding-left: 20px;
+}
+
+.entrymeta{ /* Feed Name & Date Posted */
+float: right;
+color: #666666;
+font-size:x-small;
+}
+
+.entrymeta a{
+color: #666666;
+text-decoration: none;
+}
+
+.entrybody{ /* Feed Information in link */
+padding: 10px 0px;
+}
+
+.entrybody img{
+border: none;
+padding: 2px;
+}
+
+#footer{
+text-align: center;
+margin-top 20px;
+border-top: 1px solid #000000;
+}
+
+#bottomnav{
+text-align: center;
+}
+#bottomnav a{
+text-decoration: none;
+font-weight: bold;
+}
+
+.command{
+text-align: center;
+margin-top: 30px;
+}
+
+.command a{
+color: #333;
+text-decoration: none;
+font-weight: bold;
+padding: 4px;
+border: 1px solid #cccccc;
+}
+
+#navigation{
+margin: 30px 0px;
+text-align: right;
+}
+
+#navigation a{
+text-decoration: none;
+font-weight: bold;
+padding-left: .5em;
+}
+
+.current_page_item{
+border-bottom: 3px solid #900;
+padding-bottom: 3px;
+}
+
+#searchform{
+text-align: center;
+}
+
+.inactive a{
+color: red;
+}
+
+.error{
+font-size: larger; 
+text-align:center; 
+color: red
+}
+
+pre {
+padding: 5px;
+border: 1px #000 solid;
+height: 200px;
+max-width: 780px;
+overflow: auto;
+}
+
+#markreadform{ /* Bottom Button */
+text-align: center;
+border: double #CCFFCC 20px;
+}
+
+
+#edit{
+width: 500px;
+border: 1px solid #cccccc;
+padding: 10px;
+margin: 0px auto;
+}
+
+#edit label{
+display: block;
+text-align: right;
+margin-right: 40px;
+padding-top: 10px;
+}
+
+#edit input[type="text"], #edit select {
+width: 360px;
+}
+
+#edit input[type="checkbox"]{
+margin-right: 350px;
+}
+
+#edit input[type="submit"], #markreadbutton{
+padding: 4px 30px;
+margin: 10px auto;
+display: block;
+font-weight: bold;
+font-size: larger;
+color: #333;
+border: 1px solid #000000;
+background-color: #ffffff;
+cursor: pointer;
+font-family: Helvetica, Arial, sans-serif;
+}
+
+#edit input[readonly="readonly"]{
+background-color: #eeeeee;
+}
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #419641;
+}
+.btn-success:focus,
+.btn-success.focus {
+    -webkit-box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
+    box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
+}
+.btn-success.disabled,
+.btn-success:disabled {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+}
+.btn-success:active,
+.btn-success.active,
+.btn {
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.btns {
+  list-style: none;
+  margin: 0 0 1.5em;
+  padding: 0;
+}
+
+.btns li {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.btns li:first-child {
+  margin-left: 0;
+}
+
+.btn:focus {
+  background-color: #0077b3;
+  outline: transparent;
+}
+.btn:hover {
+    text-decoration: none;
+}
+.btn:focus,
+.btn.focus {
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
+    box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
+}
+.btn.disabled,
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: .65;
+}
+.btn:active,
+.btn.active {
+    background-image: none;
+}
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+ /* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+} 
+.btn-facebook{color:#fff;background-color:#3b5998;border-color:rgba(0,0,0,0.2)}.btn-facebook:focus,.btn-facebook.focus{color:#fff;background-color:#2d4373;border-color:rgba(0,0,0,0.2)}
+.btn-facebook:hover{color:#fff;background-color:#2d4373;border-color:rgba(0,0,0,0.2)}
+.btn-facebook:active,.btn-facebook.active,.open>.dropdown-toggle.btn-facebook{color:#fff;background-color:#2d4373;border-color:rgba(0,0,0,0.2)}.btn-facebook:active:hover,.btn-facebook.active:hover,.open>.dropdown-toggle.btn-facebook:hover,.btn-facebook:active:focus,.btn-facebook.active:focus,.open>.dropdown-toggle.btn-facebook:focus,.btn-facebook:active.focus,.btn-facebook.active.focus,.open>.dropdown-toggle.btn-facebook.focus{color:#fff;background-color:#23345a;border-color:rgba(0,0,0,0.2)}
+.btn-facebook:active,.btn-facebook.active,.open>.dropdown-toggle.btn-facebook{background-image:none}
+.btn-facebook.disabled:hover,.btn-facebook[disabled]:hover,fieldset[disabled] .btn-facebook:hover,.btn-facebook.disabled:focus,.btn-facebook[disabled]:focus,fieldset[disabled] .btn-facebook:focus,.btn-facebook.disabled.focus,.btn-facebook[disabled].focus,fieldset[disabled] .btn-facebook.focus{background-color:#3b5998;border-color:rgba(0,0,0,0.2)}
+.btn-facebook .badge{color:#3b5998;background-color:#fff}
+.btn-social{position:relative;padding-left:44px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.btn-social>:first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;border-right:1px solid rgba(0,0,0,0.2)}
+.btn-social.btn-lg{padding-left:61px}.btn-social.btn-lg>:first-child{line-height:45px;width:45px;font-size:1.8em}
+.btn-social.btn-sm{padding-left:38px}.btn-social.btn-sm>:first-child{line-height:28px;width:28px;font-size:1.4em}
+.btn-social.btn-xs{padding-left:30px}.btn-social.btn-xs>:first-child{line-height:20px;width:20px;font-size:1.2em}
+.btn-social-icon{position:relative;padding-left:44px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:34px;width:34px;padding:0}.btn-social-icon>:first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;border-right:1px solid rgba(0,0,0,0.2)}
+.btn-social-icon.btn-lg{padding-left:61px}.btn-social-icon.btn-lg>:first-child{line-height:45px;width:45px;font-size:1.8em}
+.btn-social-icon.btn-sm{padding-left:38px}.btn-social-icon.btn-sm>:first-child{line-height:28px;width:28px;font-size:1.4em}
+.btn-social-icon.btn-xs{padding-left:30px}.btn-social-icon.btn-xs>:first-child{line-height:20px;width:20px;font-size:1.2em}
+.btn-social-icon>:first-child{border:none;text-align:center;width:100% !important}
+.btn-social-icon.btn-lg{height:45px;width:45px;padding-left:0;padding-right:0}
+.btn-social-icon.btn-sm{height:30px;width:30px;padding-left:0;padding-right:0}
+.btn-social-icon.btn-xs{height:22px;width:22px;padding-left:0;padding-right:0}
+
+/* pagintation */
+
+#results{
+		width: 700px;
+		margin: 0 auto;
+}
+
+#pagintation{
+	text-align:center;
+	border:0px;
+	width: 700px;
+	margin: 0 auto;
+}
+
+.link{
+	width: 700px;
+	margin: 0 auto;
+}
+
+
+li{ 
+list-style: none; 
+float: left;
+margin-right: 16px; 
+padding:5px; 
+border:solid 1px #193d81;
+color:#0063DC; 
+}
+li:hover
+{ 
+color:#FF0084; 
+cursor: pointer; 
+}
+
+figure {
+  margin: 0 0 1.5em;
+}
+
+figcaption {
+  color: #999;
+  font-size: 0.875em;
+  margin-top: 0.5em;
+  /*text-align: center;*/
+}
+
+.login,
+.login-field {
+  border-radius: 0.25em;
+}
+
+.login {
+  background-color: #e6e6e6;
+}
+
+.login-label,
+.login-field {
+  display: block;
+}
+
+.login-label {
+  font-size: 0.875em;
+  padding: 0.57142857142857em 0.57142857142857em 0.28571428571429em;*/
+}
+
+.inputplaceholder .login-label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.login-field {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  margin: 0;
+  padding: 0.75em;
+  position: relative;
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.login-field:focus {
+  border-color: #0088cc;
+  outline: transparent;
+  z-index: 2;
+}
+
+.inputplaceholder .login-field-username {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: -2px;
+}
+
+.inputplaceholder .login-field-password {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.login-footer {
+  padding: 0.25em 0.5em 0.5em;
+}
+
+.hideShowPassword-toggle,
+.my-toggle {
+  z-index: 3;
+}
+
+.byline {
+  color: #999;
+  border-top: 3px solid #e6e6e6;
+  font-size: 0.875em;
+  padding-top: 1em;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.containern {
+    padding: 2px 16px;
+}
+
+.pagination{
+ list-style: none;
+}
+.pagination li{
+ float: left;
+ border: 1px solid #000;
+ padding: 5px 7px;
+ margin-right: 10px;
+ border-radius: 3px;
+}
+.pagination li a{
+ text-decoration: none;
+ color:black;
+}
+
+.active{
+ color: red !important;
+}
